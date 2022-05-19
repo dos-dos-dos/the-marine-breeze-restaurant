@@ -20,6 +20,7 @@ class Bookings(models.Model):
     booking_end = models.DateTimeField()
     booking_status = models.CharField(max_length=5, choices=BOOKING_STATUSES, default="Active")
     table_no =  models.ForeignKey(Tables, on_delete=models.CASCADE)
+    booking_date = models.DateField()
     customer = models.CharField(max_length=10)
     booked_by = models.CharField(max_length=10)
 
